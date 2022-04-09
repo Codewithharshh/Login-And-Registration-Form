@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title></title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap');
+*{
+margin:0;   
+padding:0;
+box-sizing:border-box;
+} 
+
+body{
+font-family: 'Poppins', sans-serif;
+background:#fafafa;
+}
+.container{
+height:400px; 
+width:300px;
+background:#fafafa;
+transition:all 1s linear;
+border-radius:20px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+overflow:hidden;
+}
+
+.login_div{
+height:400px;
+width:300px;
+position:absolute;
+transition:all 0.2s ease;
+}
+
+.Signin_text{
+color:black; 
+position:absolute;
+top:35px;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:30px;
+}
+
+input{
+all:unset; 
+height:40px;
+width:200px;
+background:#F0F0F0;
+border-radius:25px;
+position:absolute;
+left:50%;
+top:95px;
+padding-left:50px;
+transform:translate(-50%,-50%);
+color:black;
+font-size:15px;
+}
+
+.fa-user,.fa-lock,.fa-envelope{
+font-size:20px;
+position:absolute;
+left:15%;
+top:85px;
+color:grey;
+}
+
+.password_input{
+top:155px;        
+}
+
+.fa-lock{
+top:145px;        
+}
+
+.forgot_text{
+color:grey;
+font-size:13px;
+position:absolute;
+top:49%;
+left:30%;
+transform:translate(-50%,-50%);
+white-space:nowrap;
+font-weight:300;        
+}
+
+.Login_btn,.signup_btn{
+all:unset;    
+padding:10px;
+width:230px;
+background:#37AD9F;
+text-align:center;
+color:white;
+border-radius:25px;
+position:absolute;
+top:60%;
+left:50%;
+transform:translate(-50%,-50%);
+cursor:pointer;
+}
+
+.social_text{
+color:black;
+font-size:13px;
+position:absolute;
+top:72%;
+left:50%;
+transform:translate(-50%,-50%);
+white-space:nowrap;
+font-weight:300;
+}
+
+.facebook,.twitter,.google{
+padding:10px; 
+background:white;
+border-radius:100%;
+height:40px;
+width:40px;
+float:left;
+margin-left:10px;
+position:relative;
+left:70px;
+top:310px;
+display:flex;
+justify-content:center;
+align-items:center;
+border:1px solid grey;
+}
+
+.facebook:hover,.twitter:hover,.google:hover{
+background:#37AD9F; 
+color:white;
+border:1px solid #37AD9F;
+}
+
+.dont_accounttext,.already_accounttext{
+color:grey;
+font-size:13px;
+position:absolute;
+bottom:5px;
+left:50%;
+transform:translate(-50%,-50%);
+white-space:nowrap;
+}
+
+.signup_now{
+color:#37AD9F;        
+}
+
+::selection{
+background:#37AD9F;  
+color:white;
+}
+
+.registration_div{
+height:400px;  
+width:300px;
+position:absolute;
+left:300px;
+background:#fafafa;
+border-radius:20px;
+transition:all 0.2s ease;
+}
+
+.signup_text{
+color:black; 
+position:absolute;
+top:35px;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:30px;        
+}
+
+.signup_username_input{
+       
+}
+
+.signup_email_input{
+margin-top:60px;       
+}
+
+.signup_password_input{
+margin-top:120px;       
+}
+
+#emailicon{
+margin-top:60px;        
+}
+
+#lockicon{
+margin-top:60px;       
+}
+
+.signup_btn{
+margin-top:35px;       
+}
+
+.social_text2{
+color:black;
+font-size:13px;
+position:absolute;
+top:83%;
+left:27%;
+transform:translate(-50%,-50%);
+white-space:nowrap;
+font-weight:300;        
+}
+
+.facebook2,.twitter2,.google2{
+padding:10px;
+background:white;
+border-radius:100%;
+height:30px;
+width:30px;
+float:left;
+margin-left:10px;
+position:relative;
+left:150px;
+top:320px;
+display:flex;
+justify-content:center;
+align-items:center;
+border:1px solid grey;  
+font-size:13px;
+}
+
+.facebook2:hover,.twitter2:hover,.google2:hover{
+background:#37AD9F; 
+color:white;
+border:1px solid #37AD9F;
+}
+</style>   
+</head>
+
+<body>
+<div class="container">
+<div class="login_div">
+ <h3 class="Signin_text">Sign In</h3>
+<input type="text" class="username_input" placeholder="Username">
+ <i class="fa fa-user" aria-hidden="true"></i>
+<input type="password" class="password_input" placeholder="Password">
+<i class="fa fa-lock" aria-hidden="true"></i>
+<h5 class="forgot_text">Forgot Password?</h5>
+<button class="Login_btn">Login</button>
+<h5 class="social_text">Or login with</h5>
+<div class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+<div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+ <div class="google"><i class="fa fa-google" aria-hidden="true"></i></div>
+<h5 class="dont_accounttext">Dont have account? <span class="signup_now" onclick="signup()">Signup now</span></h5>
+</div> 
+
+<div class="registration_div">
+ <h3 class="signup_text">Sign Up</h3>       
+<input type="text" class="signup_username_input" placeholder="Username"> 
+<i class="fa fa-user" aria-hidden="true" id="usericon"></i>
+<input type="email" class="signup_email_input" placeholder="Email">
+<i class="fa fa-envelope" aria-hidden="true" id="emailicon"></i>
+<input type="password" class="signup_password_input" placeholder="Password">
+<i class="fa fa-lock" aria-hidden="true" id="lockicon"></i>
+<button class="signup_btn">Signup</button>
+<h5 class="social_text2">Or signup with</h5>
+<div class="facebook2"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+<div class="twitter2"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+ <div class="google2"><i class="fa fa-google" aria-hidden="true"></i></div>
+<h5 class="already_accounttext">Already have an account?<span class="signup_now" onclick="signin()"> Sign In</span></h5>
+</div>
+</div>
+
+<script>
+let x = document.querySelector('.login_div');
+let y = document.querySelector('.registration_div');
+
+function signup(){
+x.style.left = '-300px'; 
+y.style.left = '0px';
+} 
+
+function signin(){
+x.style.left = '0px';
+y.style.left = '300px';
+}
+</script>
+</body>
+
+</html>
